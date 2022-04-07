@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity"
+    tools:showIn="@layout/activity_calendar">
+
+
+    <CalendarView
+        android:id="@+id/cal"
+        android:minDate="04/01/2022"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/importList"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/get_date"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:text="@string/calendar_button"
+        app:layout_constraintEnd_toEndOf="@id/importList"
+        app:layout_constraintTop_toBottomOf="@id/importList"
+        app:layout_constraintStart_toStartOf="@id/importList"
+        />
+
+    <TextView
+        android:id="@+id/date_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/default_num"
+        app:layout_constraintTop_toBottomOf="@id/get_date"
+        app:layout_constraintEnd_toEndOf="@id/get_date"
+        app:layout_constraintStart_toStartOf="@id/get_date"
+        />
+
+    <Button
+        android:id="@+id/toShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/to_calendar"
+        android:onClick="toShuffle"
+        app:layout_constraintTop_toBottomOf="@id/date_list"
+        app:layout_constraintEnd_toEndOf="@id/get_date"
+        app:layout_constraintStart_toStartOf="@id/get_date"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
